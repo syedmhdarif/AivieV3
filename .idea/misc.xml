@@ -6,18 +6,24 @@
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/bottomnav.xml" value="0.3671875" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/drafthome.xml" value="0.3104166666666667" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/getstarted.xml" value="0.3375" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/ic_baseline_circle.xml" value="0.30052083333333335" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/ic_camera.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/ic_home.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/line.xml" value="0.36302083333333335" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/loginarea.xml" value="0.3375" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/newproject.xml" value="0.3828125" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/photo_fragment.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/textinput.xml" value="0.3375" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_home.xml" value="0.264" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/fragment_photo.xml" value="0.2859375" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/fragment_record.xml" value="0.33697916666666666" />
-        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/fragment_template.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/fragment_template.xml" value="0.2" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/fragment_video.xml" value="0.271875" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/photo_fragment.xml" value="0.3625" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/video_fragment.xml" value="0.3625" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/menu/menu.xml" value="0.35104166666666664" />
       </map>
     </option>
