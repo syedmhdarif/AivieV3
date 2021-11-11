@@ -2,6 +2,7 @@ package com.example.aivieapp;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TableLayout;
 
+import com.example.aivieapp.Adapter.SectionPagerAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
@@ -21,10 +23,11 @@ import com.google.android.material.tabs.TabLayout;
  * create an instance of this fragment.
  */
 public class template extends Fragment {
+    View myFragment;
 
     TabLayout tabLayout;
-    ViewPager2 pager2;
-    FragmentAdapter adapter;
+    ViewPager viewPager;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -104,7 +107,46 @@ public class template extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_template, container, false);
+        myFragment = inflater.inflate(R.layout.fragment_template, container, false);
 
+        viewPager = myFragment.findViewById(R.id.viewPager);
+        tabLayout = myFragment.findViewById(R.id.tabLayout);
+
+        return myFragment;
+
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        setUpViewPager(viewPager);
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+    }
+
+    private void setUpViewPager(ViewPager viewPager) {
+        SectionPagerAdapter adapter = new SectionPagerAdapter(getChildFragmentManager());
+
+        adapter.addFragment(new FixtureFragment(), "All");
+        adapter.addFragment(new PhotoFragment(), "Photo");
+        adapter.addFragment(new VideoFragment(), "Video");
+
+
+        viewPager.setAdapter(adapter);
     }
 }

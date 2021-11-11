@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,11 +7,17 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="photo fragment"
-    android:textAlignment="center"
-    android:layout_gravity="center"
-    android:id="@+id/textfrag2"/>
+        android:id="@+id/textfrag2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="413dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:text="photo fragment"
+        android:textAlignment="center" />
 
-</FrameLayout>
+</RelativeLayout>
