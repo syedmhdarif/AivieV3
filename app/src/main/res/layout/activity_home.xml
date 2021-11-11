@@ -45,8 +45,9 @@
                 app:backgroundTint="#F15F79"
 
             android:elevation="4dp"
+            app:fabCustomSize="70dp"
 
-            android:src="@drawable/ic_baseline_circle"
+            android:src="@drawable/ic_camera"
             tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

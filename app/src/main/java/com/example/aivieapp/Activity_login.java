@@ -45,7 +45,7 @@ public class Activity_login extends AppCompatActivity {
 
         loginarea.setAlpha(v);
 
-        loginarea.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(700).start();
+        loginarea.animate().translationY(0).alpha(1).setDuration(600).setStartDelay(400).start();
     }
     public void openActivity3(){
         Intent intent = new Intent(this, Activity_home.class);
