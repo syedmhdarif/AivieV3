@@ -53,21 +53,21 @@ public class Activity_home extends AppCompatActivity {
 //                    }, 100);
 //        }
 //
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
-//                startActivityForResult(intent, 100);
-//            }
-//        });
-
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openActivity3();
-                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+                startActivityForResult(intent, 100);
             }
         });
+
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openActivity3();
+//                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+//            }
+//        });
     }
     private BottomNavigationView.OnNavigationItemSelectedListener bottomNavMethod=new
             BottomNavigationView.OnNavigationItemSelectedListener(){

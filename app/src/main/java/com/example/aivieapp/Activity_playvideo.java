@@ -2,8 +2,10 @@ package com.example.aivieapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.widget.VideoView;
 
 public class Activity_playvideo extends AppCompatActivity {
@@ -35,6 +37,22 @@ public class Activity_playvideo extends AppCompatActivity {
 //            mvideoView.start();
 //        }
 //    }
+private String getRealPathFromURI(Uri contentURI) {
+    String result;
+    Cursor cursor = getContentResolver().query(contentURI, null, null, null, null);
+
+    if (cursor == null){
+        result = contentURI.getPath();
+    }
+    else{
+        cursor.moveToFirst();
+        int idx = cursor.getColumnIndexOrThrow(MediaStore.Video.VideoColumns.DATA);
+        result = cursor.getString(idx);
+        cursor.close();
+    }
+
+    return result;
+}
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         videoView = findViewById(R.id.video_View);
@@ -44,9 +62,11 @@ public class Activity_playvideo extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
 
+
         if (bundle != null){
             Uri uri = Uri.parse(bundle.getString("uri"));
-            videoView.setVideoURI(uri);
+            String path = getRealPathFromURI(uri);
+            videoView.setVideoURI(Uri.parse(path));
             videoView.start();
         }
     }
