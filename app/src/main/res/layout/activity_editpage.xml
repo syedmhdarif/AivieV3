@@ -12,7 +12,7 @@
         android:id="@+id/topnav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,10 +54,12 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+
     <RelativeLayout
         android:id="@+id/bglayout"
         android:layout_width="match_parent"
-        android:layout_height="670dp"
+        android:layout_height="0dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="10dp"
@@ -66,77 +68,326 @@
         android:gravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topnav"
-        app:layout_constraintVertical_bias="0.9">
+        app:layout_constraintVertical_bias="1.0">
 
-        <VideoView
-            android:id="@+id/video_View"
-            android:layout_width="350dp"
+
+
+        <RelativeLayout
+            android:id="@+id/videoview1"
+            android:layout_width="match_parent"
             android:layout_height="450dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="66dp"
-            android:visibility="invisible" />
+            android:layout_marginStart="0dp">
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            <VideoView
+                android:id="@+id/video_View"
+                android:layout_width="350dp"
+                android:layout_height="450dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="0dp"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/editprogress"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_below="@+id/videoview1"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="26dp"
+            android:background="@drawable/editprogress">
+
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/editmusic"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/editprogress"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/editprogress">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Music"
+                android:textAlignment="center"
+                android:textColor="@color/pink"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/editsegment"
+            android:layout_width="368dp"
+            android:layout_height="62dp"
+            android:layout_below="@+id/editmusic"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="0dp">
+
+            <ImageView
+                android:id="@+id/editsegment1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/editprogress"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/editsegment2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/editprogress"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editsegment1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/editsegment3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/segmentaddvideo"
+                android:src="@drawable/ic_baseline_add_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editsegment2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/basicedit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/editsegment"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="198dp" />
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="10dp">
+
+
+            <RelativeLayout
+                android:id="@+id/Bgmatting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/backgroundmatting"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                    tools:layout_editor_absoluteY="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/backgroundmatting"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"
+
+                    android:text="Bg matting"
+                    android:textColor="@color/white"
+                    android:textSize="7dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Bgmatting"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteY="0dp">
+
+                <ImageButton
+                    android:id="@+id/editText1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                    tools:layout_editor_absoluteY="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editText1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="-3dp"
+                    android:text="Text"
+                    android:textColor="@color/white"
+                    android:textSize="7dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/editSticker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editText"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteY="0dp">
+
+                <ImageButton
+                    android:id="@+id/editSticker1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                    tools:layout_editor_absoluteY="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editSticker1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="-3dp"
+                    android:text="Stciker"
+                    android:textColor="@color/white"
+                    android:textSize="7dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/editAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editSticker"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteY="0dp">
+
+                <ImageButton
+                    android:id="@+id/editAudio1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                    tools:layout_editor_absoluteY="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editAudio1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="-3dp"
+                    android:text="Audio"
+                    android:textColor="@color/white"
+                    android:textSize="7dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
             android:id="@+id/Editpage"
-            android:layout_width="201dp"
-            android:layout_height="60dp"
+            android:layout_width="51dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/PlayButton"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="105dp"
 
-            android:layout_marginEnd="105dp"
-            android:layout_marginBottom="21dp"
-            android:text="Select video"
+            android:layout_marginStart="10dp"
+
+            android:layout_marginBottom="10dp"
+            android:text="s"
             android:textColor="@color/white"
-            android:textSize="14dp"
+            android:textSize="10dp"
             tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/PlayButton"
-            android:layout_width="201dp"
-            android:layout_height="60dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="105dp"
-
-            android:layout_marginEnd="105dp"
-            android:layout_marginBottom="89dp"
-            android:onClick="PlayButton"
-            android:text="Play"
-            android:textColor="@color/white"
-            android:textSize="14dp"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <SeekBar
-            android:id="@+id/seekBar2"
-            android:layout_width="415dp"
+            android:layout_width="51dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="161dp" />
+            android:layout_marginStart="10dp"
+
+            android:layout_marginBottom="522dp"
+            android:onClick="PlayButton"
+            android:text="P"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            tools:ignore="TouchTargetSizeCheck" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

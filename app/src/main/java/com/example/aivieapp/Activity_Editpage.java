@@ -45,7 +45,7 @@ public class Activity_Editpage extends AppCompatActivity {
 
         editpage = findViewById(R.id.Editpage);
         videoView = findViewById(R.id.video_View);
-        seekBar = findViewById(R.id.seekBar2);
+//        seekBar = findViewById(R.id.seekBar2);
         imageButton = findViewById(R.id.goback);
 
         mprogressBar = findViewById(R.id.progressBar);
@@ -140,7 +140,7 @@ public class Activity_Editpage extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onTick(long millisUntilFinished) {
-                seekBar.setProgress(videoView.getCurrentPosition(), true);
+//                seekBar.setProgress(videoView.getCurrentPosition(), true);
             }
 
             @Override
