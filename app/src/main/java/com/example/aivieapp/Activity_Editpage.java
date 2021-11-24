@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -29,7 +30,8 @@ import android.widget.VideoView;
 public class Activity_Editpage extends AppCompatActivity {
 
 
-    Button editpage;
+
+    ImageButton editpage;
     VideoView videoView;
     MediaController mc;
     SeekBar seekBar;
@@ -54,6 +56,7 @@ public class Activity_Editpage extends AppCompatActivity {
 
         mc = new MediaController(Activity_Editpage.this);
         videoView.setMediaController(mc);
+        mc.setAnchorView(videoView);
 
 
 
@@ -99,6 +102,8 @@ public class Activity_Editpage extends AppCompatActivity {
         int current = 0;
         @Override
         protected Void doInBackground(Void... params) {
+
+
 
             videoView.start();
             videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
@@ -167,8 +172,10 @@ public class Activity_Editpage extends AppCompatActivity {
         }
     }
 
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
         super.onActivityResult(requestCode, resultCode, data);
 //        if (requestCode == 100 && resultCode == RESULT_OK && data != null) {
 //            Uri uri = data.getData();
@@ -182,6 +189,7 @@ public class Activity_Editpage extends AppCompatActivity {
             videoView.setVisibility(View.VISIBLE);
             videoView.setVideoURI(uri);
             videoView.start();
+
         }
     }
 }

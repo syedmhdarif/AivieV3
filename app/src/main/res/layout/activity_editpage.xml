@@ -64,7 +64,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="10dp"
         android:background="@drawable/editing_background"
-
         android:gravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,27 +73,25 @@
         app:layout_constraintVertical_bias="1.0">
 
 
-
         <RelativeLayout
             android:id="@+id/videoview1"
-            android:layout_width="match_parent"
-            android:layout_height="450dp"
+            android:layout_width="wrap_content"
+            android:layout_height="480dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="0dp">
 
             <VideoView
                 android:id="@+id/video_View"
-                android:layout_width="350dp"
-                android:layout_height="450dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
 
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="55dp"
                 android:layout_marginTop="0dp"
-                android:layout_marginEnd="28dp"
+                android:layout_marginEnd="55dp"
                 android:layout_marginBottom="0dp"
                 android:visibility="invisible" />
 
@@ -105,15 +102,15 @@
         <RelativeLayout
             android:id="@+id/editprogress"
             android:layout_width="wrap_content"
-            android:layout_height="37dp"
+            android:layout_height="50dp"
             android:layout_below="@+id/videoview1"
-
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
 
-            android:layout_marginStart="22dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="9dp"
-            android:layout_marginEnd="26dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/editprogress">
 
 
@@ -124,10 +121,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
-                android:layout_marginBottom="10dp" />
+               />
 
 
         </RelativeLayout>
@@ -135,7 +132,7 @@
         <RelativeLayout
             android:id="@+id/editmusic"
             android:layout_width="wrap_content"
-            android:layout_height="20dp"
+            android:layout_height="24dp"
             android:layout_below="@+id/editprogress"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
@@ -166,7 +163,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="9dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="0dp">
 
             <ImageView
@@ -189,21 +186,23 @@
                 app:layout_constraintStart_toEndOf="@+id/editsegment1"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/editsegment3"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="12dp"
                 android:background="@drawable/segmentaddvideo"
+
+                android:padding="7dp"
+                android:scaleType="fitCenter"
                 android:src="@drawable/ic_baseline_add_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/editsegment2"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -219,175 +218,324 @@
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="10dp">
 
+            <HorizontalScrollView
+                app:layout_constraintTop_toTopOf="@+id/basicedit"
+                app:layout_constraintBottom_toBottomOf="@+id/basicedit"
+                android:id="@+id/horizontalscroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
-            <RelativeLayout
-                android:id="@+id/Bgmatting"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                <RelativeLayout
+                    android:id="@+id/horizontalscroll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                    <RelativeLayout
+                        android:id="@+id/Bgmatting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
 
-                <ImageButton
-                    android:id="@+id/backgroundmatting"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_centerHorizontal="true"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-                    tools:layout_editor_absoluteY="5dp" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/backgroundmatting"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="1dp"
+                        <ImageButton
+                            android:id="@+id/backgroundmatting"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:padding="7dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_baseline_image_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                            tools:layout_editor_absoluteY="5dp" />
 
-                    android:text="Bg matting"
-                    android:textColor="@color/white"
-                    android:textSize="7dp"
-                    android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/backgroundmatting"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="1dp"
 
-            </RelativeLayout>
+                            android:text="Background"
+                            android:textColor="@color/white"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
 
-            <RelativeLayout
-                android:id="@+id/editText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/Bgmatting"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:layout_editor_absoluteY="0dp">
+                    </RelativeLayout>
 
-                <ImageButton
-                    android:id="@+id/editText1"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_centerHorizontal="true"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-                    tools:layout_editor_absoluteY="5dp" />
+                    <RelativeLayout
+                        android:id="@+id/editText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/Bgmatting"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteY="0dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editText1"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginBottom="-3dp"
-                    android:text="Text"
-                    android:textColor="@color/white"
-                    android:textSize="7dp"
-                    android:textStyle="bold" />
+                        <ImageButton
+                            android:id="@+id/editText1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_text"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                            tools:layout_editor_absoluteY="5dp" />
 
-            </RelativeLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/editText1"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="-3dp"
+                            android:text="Text"
+                            android:textColor="@color/white"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
 
-            <RelativeLayout
-                android:id="@+id/editSticker"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/editText"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:layout_editor_absoluteY="0dp">
+                    </RelativeLayout>
 
-                <ImageButton
-                    android:id="@+id/editSticker1"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_centerHorizontal="true"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-                    tools:layout_editor_absoluteY="5dp" />
+                    <RelativeLayout
+                        android:id="@+id/editSticker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/editText"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteY="0dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editSticker1"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginBottom="-3dp"
-                    android:text="Stciker"
-                    android:textColor="@color/white"
-                    android:textSize="7dp"
-                    android:textStyle="bold" />
+                        <ImageButton
+                            android:id="@+id/editSticker1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_sticker"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                            tools:layout_editor_absoluteY="5dp" />
 
-            </RelativeLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/editSticker1"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="-3dp"
+                            android:text="Stciker"
+                            android:textColor="@color/white"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
 
-            <RelativeLayout
-                android:id="@+id/editAudio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/editSticker"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:layout_editor_absoluteY="0dp">
+                    </RelativeLayout>
 
-                <ImageButton
-                    android:id="@+id/editAudio1"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_centerHorizontal="true"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-                    tools:layout_editor_absoluteY="5dp" />
+                    <RelativeLayout
+                        android:id="@+id/editAudio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/editSticker"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteY="0dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editAudio1"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginBottom="-3dp"
-                    android:text="Audio"
-                    android:textColor="@color/white"
-                    android:textSize="7dp"
-                    android:textStyle="bold" />
+                        <ImageButton
+                            android:id="@+id/editAudio1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:padding="9dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_audio"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                            tools:layout_editor_absoluteY="5dp" />
 
-            </RelativeLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/editAudio1"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="-3dp"
+                            android:text="Audio"
+                            android:textColor="@color/white"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/editSplit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/editAudio"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteY="0dp">
+
+                        <ImageButton
+                            android:id="@+id/editSplit1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:padding="9dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_split"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                            tools:layout_editor_absoluteY="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/editSplit1"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="-3dp"
+                            android:text="Split"
+                            android:textColor="@color/white"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/editSpeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/editSplit"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteY="0dp">
+
+                        <ImageButton
+                            android:id="@+id/editSpeed1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@android:color/transparent"
+                            android:padding="6dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_speed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                            tools:layout_editor_absoluteY="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/editSpeed1"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="-3dp"
+                            android:text="Split"
+                            android:textColor="@color/white"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/editBin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/editSpeed"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteY="0dp">
+
+                        <ImageButton
+                            android:id="@+id/editBin1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@android:color/transparent"
+                            android:padding="6dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_bin"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                            tools:layout_editor_absoluteY="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/editBin1"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="-3dp"
+                            android:text="Delete"
+                            android:textColor="@color/white"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <Button
+        <ImageButton
             android:id="@+id/Editpage"
-            android:layout_width="51dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/PlayButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentStart="true"
-
+            android:layout_alignParentTop="true"
             android:layout_marginStart="10dp"
-
-            android:layout_marginBottom="10dp"
-            android:text="s"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/selectvideo"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_add_24"
             android:textColor="@color/white"
             android:textSize="10dp"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-        <Button
+        <ImageButton
             android:id="@+id/PlayButton"
-            android:layout_width="51dp"
-            android:layout_height="wrap_content"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_below="@+id/Editpage"
             android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
             android:layout_marginStart="10dp"
-
-            android:layout_marginBottom="522dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/selectvideo"
             android:onClick="PlayButton"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_play_arrow_24"
             android:text="P"
             android:textColor="@color/white"
             android:textSize="10dp"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
