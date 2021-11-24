@@ -46,13 +46,13 @@ public class Activity_home extends AppCompatActivity {
         fab = findViewById(R.id.fab);
 //        videoView = findViewById(R.id.video_View);
 
-//        if (ContextCompat.checkSelfPermission(Activity_home.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
-//            ActivityCompat.requestPermissions(Activity_home.this,
-//                    new String[]{
-//                            Manifest.permission.CAMERA
-//                    }, 100);
-//        }
-//
+        if (ContextCompat.checkSelfPermission(Activity_home.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(Activity_home.this,
+                    new String[]{
+                            Manifest.permission.CAMERA
+                    }, 100);
+        }
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
