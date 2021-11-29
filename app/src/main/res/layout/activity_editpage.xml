@@ -76,7 +76,7 @@
         <RelativeLayout
             android:id="@+id/videoview1"
             android:layout_width="wrap_content"
-            android:layout_height="480dp"
+            android:layout_height="460dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="0dp">
@@ -89,9 +89,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
 
-                android:layout_marginStart="55dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="0dp"
-                android:layout_marginEnd="55dp"
+                android:layout_marginEnd="60dp"
                 android:layout_marginBottom="0dp"
                 android:visibility="invisible" />
 
@@ -107,10 +107,10 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-
             android:layout_marginStart="24dp"
             android:layout_marginTop="9dp"
             android:layout_marginEnd="24dp"
+            android:layout_toStartOf="@+id/videoview1"
             android:background="@drawable/editprogress">
 
 
@@ -123,8 +123,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerInParent="true"
                 android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-               />
+                android:layout_marginEnd="30dp" />
 
 
         </RelativeLayout>
