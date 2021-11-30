@@ -113,8 +113,30 @@
             android:layout_toStartOf="@+id/videoview1"
             android:background="@drawable/editprogress">
 
+            <ImageButton
+                android:id="@+id/endadjust"
+                android:layout_width="26dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="0dp"
+                android:src="@drawable/ic_lineprogressbar"
+                android:background="@drawable/segmentaddvideo"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-            <ProgressBar
+
+            <ImageButton
+                android:id="@+id/startadjust"
+                android:layout_width="26dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="0dp"
+                android:src="@drawable/ic_lineprogressbar"
+                android:background="@drawable/segmentaddvideo"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <SeekBar
                 android:id="@+id/progressBar"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="fill_parent"
@@ -122,8 +144,8 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_centerInParent="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp" />
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp" />
 
 
         </RelativeLayout>
@@ -542,6 +564,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:layout_marginEnd="20dp"
                         android:layout_toEndOf="@+id/editSpeed"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
