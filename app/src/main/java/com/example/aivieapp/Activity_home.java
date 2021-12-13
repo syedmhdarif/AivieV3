@@ -46,28 +46,28 @@ public class Activity_home extends AppCompatActivity {
         fab = findViewById(R.id.fab);
 //        videoView = findViewById(R.id.video_View);
 
-        if (ContextCompat.checkSelfPermission(Activity_home.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(Activity_home.this,
-                    new String[]{
-                            Manifest.permission.CAMERA
-                    }, 100);
-        }
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
-                startActivityForResult(intent, 100);
-            }
-        });
+//        if (ContextCompat.checkSelfPermission(Activity_home.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
+//            ActivityCompat.requestPermissions(Activity_home.this,
+//                    new String[]{
+//                            Manifest.permission.CAMERA
+//                    }, 100);
+//        }
 
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                openActivity3();
-//                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+//                Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+//                startActivityForResult(intent, 100);
 //            }
 //        });
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity3();
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+            }
+        });
     }
     private BottomNavigationView.OnNavigationItemSelectedListener bottomNavMethod=new
             BottomNavigationView.OnNavigationItemSelectedListener(){
@@ -91,7 +91,7 @@ public class Activity_home extends AppCompatActivity {
             };
 
     public void openActivity3(){
-        Intent intent = new Intent(this, Activity_editing.class);
+        Intent intent = new Intent(this, Activity_Camera.class);
         startActivity(intent);
     }
 

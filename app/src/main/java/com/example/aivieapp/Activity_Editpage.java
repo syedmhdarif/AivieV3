@@ -8,6 +8,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.MediaMetadataRetriever;
@@ -17,6 +18,8 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,19 +27,24 @@ import android.widget.ImageButton;
 import android.widget.MediaController;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
 public class Activity_Editpage extends AppCompatActivity {
+    static MediaPlayer mMediaPlayer;
 
 
 
     ImageButton editpage;
+    ImageButton editpage2;
     VideoView videoView;
     MediaController mc;
-    SeekBar seekBar;
-    ProgressBar mprogressBar;
+//    SeekBar seekBar;
+    SeekBar mprogressBar;
     ImageButton imageButton;
+    TextView curTime;
+    TextView toTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +54,7 @@ public class Activity_Editpage extends AppCompatActivity {
 //        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, PackageManager.PERMISSION_GRANTED);
 
         editpage = findViewById(R.id.Editpage);
+        editpage2 = findViewById(R.id.editsegment8);
         videoView = findViewById(R.id.video_View);
 //        seekBar = findViewById(R.id.seekBar2);
         imageButton = findViewById(R.id.goback);
@@ -54,9 +63,13 @@ public class Activity_Editpage extends AppCompatActivity {
         mprogressBar.setProgress(0);
         mprogressBar.setMax(100);
 
+        curTime = findViewById(R.id.time1);
+        toTime = findViewById(R.id.time5);
+
         mc = new MediaController(Activity_Editpage.this);
         videoView.setMediaController(mc);
         mc.setAnchorView(videoView);
+
 
 
 
@@ -71,11 +84,40 @@ public class Activity_Editpage extends AppCompatActivity {
                 }
             }
         });
+        editpage2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ContextCompat.checkSelfPermission(Activity_Editpage.this, Manifest.permission.READ_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(Activity_Editpage.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+                }
+                else {
+                    selectVideo2();
+                }
+            }
+        });
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openActivity3();
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+            }
+        });
+        mprogressBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (fromUser){
+                    mprogressBar.setProgress(progress);
+                }
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
             }
         });
 
@@ -161,6 +203,12 @@ public class Activity_Editpage extends AppCompatActivity {
         startActivityForResult(Intent.createChooser(intent, "select video"), 100);
     }
 
+    private void selectVideo2() {
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setType("video/*");
+        startActivityForResult(Intent.createChooser(intent, "select video"), 100);
+    }
+
         @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -191,5 +239,29 @@ public class Activity_Editpage extends AppCompatActivity {
             videoView.start();
 
         }
+    }
+    @SuppressLint("HandlerLeak")
+    private Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+//            Log.i("handler ", "handler called");
+            int current_position = msg.what;
+            mprogressBar.setProgress(current_position);
+            String cTime = createTimeLabel(current_position);
+            curTime.setText(cTime);
+        }
+    };
+    public String createTimeLabel (int duration){
+        String timerlabel = "";
+        int min = duration / 1000 / 60;
+        int sec = duration / 1000 % 60;
+
+        timerlabel += min + ":";
+
+        if (sec<10)timerlabel += "0";
+        timerlabel += sec;
+
+        return timerlabel;
+
     }
 }

@@ -76,7 +76,7 @@
         <RelativeLayout
             android:id="@+id/videoview1"
             android:layout_width="wrap_content"
-            android:layout_height="460dp"
+            android:layout_height="450dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="0dp">
@@ -89,12 +89,77 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
 
-                android:layout_marginStart="60dp"
+                android:layout_marginStart="65dp"
                 android:layout_marginTop="0dp"
-                android:layout_marginEnd="60dp"
+                android:layout_marginEnd="65dp"
                 android:layout_marginBottom="0dp"
                 android:visibility="invisible" />
 
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/timeinterval"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_below="@+id/videoview1"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="36dp"
+                android:text="0:00"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/time2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="60dp"
+                android:layout_toEndOf="@+id/time1"
+                android:text="0:15"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/time3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="60dp"
+                android:layout_toEndOf="@+id/time2"
+                android:text="0:30"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/time4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="60dp"
+                android:layout_toEndOf="@+id/time3"
+                android:text="0:45"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/time5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="60dp"
+                android:layout_toEndOf="@+id/time4"
+                android:text="1:00"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
 
         </RelativeLayout>
 
@@ -103,12 +168,12 @@
             android:id="@+id/editprogress"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_below="@+id/videoview1"
+            android:layout_below="@+id/timeinterval"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="9dp"
+            android:layout_marginTop="3dp"
             android:layout_marginEnd="24dp"
             android:layout_toStartOf="@+id/videoview1"
             android:background="@drawable/editprogress">
@@ -120,8 +185,8 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="0dp"
-                android:src="@drawable/ic_lineprogressbar"
                 android:background="@drawable/segmentaddvideo"
+                android:src="@drawable/ic_lineprogressbar"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
 
@@ -132,8 +197,8 @@
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="0dp"
-                android:src="@drawable/ic_lineprogressbar"
                 android:background="@drawable/segmentaddvideo"
+                android:src="@drawable/ic_lineprogressbar"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <SeekBar
@@ -292,8 +357,8 @@
                     android:layout_height="50dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="6dp"
+                    android:layout_marginEnd="24dp"
                     android:layout_toEndOf="@+id/editsegment7"
-                    android:layout_marginEnd="20dp"
 
                     android:background="@drawable/segmentaddvideo"
                     android:padding="7dp"
@@ -564,7 +629,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:layout_marginEnd="20dp"
+                        android:layout_marginEnd="24dp"
                         android:layout_toEndOf="@+id/editSpeed"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
