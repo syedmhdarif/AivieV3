@@ -72,7 +72,8 @@
                     android:background="@android:color/transparent"
                     android:padding="4dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_plusvideo" />
+                    android:src="@drawable/ic_plusvideo"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -125,7 +126,8 @@
                     android:background="@android:color/transparent"
                     android:padding="4dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_plusvideo" />
+                    android:src="@drawable/ic_plusvideo"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -178,7 +180,8 @@
                     android:background="@android:color/transparent"
                     android:padding="4dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_plusvideo" />
+                    android:src="@drawable/ic_plusvideo"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -231,7 +234,8 @@
                     android:background="@android:color/transparent"
                     android:padding="4dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_plusvideo" />
+                    android:src="@drawable/ic_plusvideo"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
             </RelativeLayout>
         </RelativeLayout>
 

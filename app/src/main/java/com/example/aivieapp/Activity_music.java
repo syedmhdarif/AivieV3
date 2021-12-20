@@ -45,7 +45,16 @@ public class Activity_music extends AppCompatActivity {
 //        popupWindow.setAnimationStyle(R.style.popup_window_animation_phone);
         popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
 
+    }
+    public void buttonPopupWindow2(View view){
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
 
+        View viewPopupwindow = layoutInflater.inflate(R.layout.activity_popupmusic, null);
+
+        PopupWindow popupWindow = new PopupWindow(viewPopupwindow, 1400, 1600, true);
+        popupWindow.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
+//        popupWindow.setAnimationStyle(R.style.popup_window_animation_phone);
+        popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
 
     }
 }

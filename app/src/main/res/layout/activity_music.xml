@@ -311,6 +311,7 @@
                             android:layout_centerHorizontal="true"
                             android:background="@android:color/transparent"
                             android:src="@drawable/ic_music_upload"
+                            android:onClick="buttonPopupWindow2"
                             app:layout_constraintStart_toStartOf="parent"
                             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
                             tools:layout_editor_absoluteY="5dp" />
