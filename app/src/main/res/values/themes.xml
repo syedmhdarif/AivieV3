@@ -14,4 +14,14 @@
         
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="popup_window_animation_phone">
+        <item name="android:windowEnterAnimation">@anim/fade_in_animation</item>
+    </style>
+
+    <style name="popup_window_animation_phone2">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+    </style>
+
+
 </resources>

@@ -22,6 +22,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Aivieapp">
         <activity
+            android:name=".Activity_Popupmusic"
+            android:exported="true" />
+        <activity
+            android:name=".Activity_music"
+            android:exported="true" />
+        <activity
             android:name=".Activity_Camera"
             android:exported="true" />
         <activity

@@ -38,6 +38,8 @@ public class Activity_Editpage extends AppCompatActivity {
 
     ImageButton editpage;
     ImageButton editpage2;
+    ImageButton mmusicedit;
+    ImageButton meditaudio1;
     VideoView videoView;
     MediaController mc;
 //    SeekBar seekBar;
@@ -55,6 +57,8 @@ public class Activity_Editpage extends AppCompatActivity {
 
         editpage = findViewById(R.id.Editpage);
         editpage2 = findViewById(R.id.editsegment8);
+        mmusicedit = findViewById(R.id.musicedit);
+        meditaudio1 = findViewById(R.id.editAudio1);
         videoView = findViewById(R.id.video_View);
 //        seekBar = findViewById(R.id.seekBar2);
         imageButton = findViewById(R.id.goback);
@@ -102,6 +106,20 @@ public class Activity_Editpage extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
+        mmusicedit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity4();
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+            }
+        });
+        meditaudio1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity4();
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+            }
+        });
         mprogressBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -135,6 +153,10 @@ public class Activity_Editpage extends AppCompatActivity {
 
     private void openActivity3() {
         Intent intent = new Intent(this, Activity_home.class);
+        startActivity(intent);
+    }
+    private void openActivity4() {
+        Intent intent = new Intent(this, Activity_music.class);
         startActivity(intent);
     }
 
