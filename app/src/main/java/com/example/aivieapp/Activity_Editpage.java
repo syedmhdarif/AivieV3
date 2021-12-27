@@ -20,11 +20,15 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Message;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.MediaController;
+import android.widget.PopupWindow;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -39,6 +43,7 @@ public class Activity_Editpage extends AppCompatActivity {
     ImageButton editpage;
     ImageButton editpage2;
     ImageButton mmusicedit;
+    ImageButton meditspeed1;
     ImageButton meditaudio1;
     VideoView videoView;
     MediaController mc;
@@ -57,6 +62,7 @@ public class Activity_Editpage extends AppCompatActivity {
 
         editpage = findViewById(R.id.Editpage);
         editpage2 = findViewById(R.id.editsegment8);
+        meditspeed1 = findViewById(R.id.editSpeed1);
         mmusicedit = findViewById(R.id.musicedit);
         meditaudio1 = findViewById(R.id.editAudio1);
         videoView = findViewById(R.id.video_View);
@@ -120,6 +126,13 @@ public class Activity_Editpage extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
+        meditspeed1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity5();
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+            }
+        });
         mprogressBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -150,6 +163,17 @@ public class Activity_Editpage extends AppCompatActivity {
 //        });
 
     }
+    public void buttonPopupWindow(View view){
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+
+        View viewPopupwindow = layoutInflater.inflate(R.layout.activity_popupsticker, null);
+
+        PopupWindow popupWindow = new PopupWindow(viewPopupwindow, 1400, 1600, true);
+        popupWindow.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
+//        popupWindow.setAnimationStyle(R.style.popup_window_animation_phone);
+        popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
+
+    }
 
     private void openActivity3() {
         Intent intent = new Intent(this, Activity_home.class);
@@ -157,6 +181,10 @@ public class Activity_Editpage extends AppCompatActivity {
     }
     private void openActivity4() {
         Intent intent = new Intent(this, Activity_music.class);
+        startActivity(intent);
+    }
+    private void openActivity5() {
+        Intent intent = new Intent(this, Activity_speed.class);
         startActivity(intent);
     }
 
@@ -286,4 +314,6 @@ public class Activity_Editpage extends AppCompatActivity {
         return timerlabel;
 
     }
+
+
 }

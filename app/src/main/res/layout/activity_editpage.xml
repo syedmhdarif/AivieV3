@@ -232,8 +232,7 @@
                 android:id="@+id/musicedit"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
                 android:background="@drawable/editprogress"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
@@ -501,6 +500,7 @@
                             android:layout_height="50dp"
                             android:layout_centerHorizontal="true"
                             android:background="@android:color/transparent"
+                            android:onClick="buttonPopupWindow"
                             android:src="@drawable/ic_sticker"
                             app:layout_constraintStart_toStartOf="parent"
                             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
