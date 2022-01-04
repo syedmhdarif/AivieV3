@@ -26,67 +26,158 @@
                 android:id="@+id/stickers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Stickers"
-                android:textSize="16dp"
-                android:textStyle="normal"
-                android:textColor="@color/black"
-                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
-                />
+                android:layout_marginTop="10dp"
+                android:text="Stickers"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="normal" />
 
             <RelativeLayout
-                android:id="@+id/music1"
+                android:id="@+id/stickerview1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/stickers"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="18dp">
+                android:layout_marginTop="20dp">
 
-                <ImageView
-                    android:id="@+id/vidprev"
-                    android:layout_width="105dp"
-                    android:layout_height="73dp"
+                <RelativeLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="26dp"
-                    android:background="@drawable/drafthome" />
+                    <ImageView
+                        android:id="@+id/sticker1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="26dp"
 
-                <TextView
-                    android:id="@+id/titlemusic"
-                    android:layout_width="wrap_content"
+                        android:src="@drawable/bell" />
+
+                    <ImageView
+                        android:id="@+id/sticker2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@+id/sticker1"
+                        android:src="@drawable/house" />
+
+                    <ImageView
+                        android:id="@+id/sticker3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@+id/sticker2"
+                        android:src="@drawable/snow" />
+
+                    <ImageView
+                        android:id="@+id/sticker4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="26dp"
+                        android:layout_toEndOf="@+id/sticker3"
+                        android:src="@drawable/house2" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="18dp"
-                    android:layout_marginTop="14dp"
-                    android:layout_toEndOf="@+id/vidprev"
-                    android:text="The only exception"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="normal" />
+                    android:layout_below="@+id/layout1">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <ImageView
+                        android:id="@+id/ssticker1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="26dp"
+
+                        android:src="@drawable/house" />
+
+                    <ImageView
+                        android:id="@+id/ssticker2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@+id/ssticker1"
+                        android:src="@drawable/house" />
+
+                    <ImageView
+                        android:id="@+id/ssticker3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@+id/ssticker2"
+                        android:src="@drawable/house" />
+
+                    <ImageView
+                        android:id="@+id/ssticker4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="26dp"
+                        android:layout_toEndOf="@+id/ssticker3"
+                        android:src="@drawable/house" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout3"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/titlemusic"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_toEndOf="@+id/vidprev"
-                    android:text="03:25"
-                    android:textColor="@color/black"
-                    android:textSize="14dp" />
+                    android:layout_below="@+id/layout2">
 
-                <ImageButton
-                    android:layout_width="37dp"
-                    android:layout_height="28dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="24dp"
-                    android:background="@android:color/transparent"
-                    android:padding="4dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ic_plusvideo"
-                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                    <ImageView
+                        android:id="@+id/msticker1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="26dp"
+
+                        android:src="@drawable/house" />
+
+                    <ImageView
+                        android:id="@+id/msticker2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@+id/msticker1"
+                        android:src="@drawable/house" />
+
+                    <ImageView
+                        android:id="@+id/msticker3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@+id/msticker2"
+                        android:src="@drawable/house" />
+
+                    <ImageView
+                        android:id="@+id/msticker4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="26dp"
+                        android:layout_toEndOf="@+id/msticker3"
+                        android:src="@drawable/house" />
+
+
+                </RelativeLayout>
+
+
             </RelativeLayout>
+
+
+
+
+
 
 
         </RelativeLayout>

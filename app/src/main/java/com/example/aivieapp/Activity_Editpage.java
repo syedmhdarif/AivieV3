@@ -11,7 +11,6 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -24,12 +23,9 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.MediaController;
 import android.widget.PopupWindow;
-import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,6 +41,7 @@ public class Activity_Editpage extends AppCompatActivity {
     ImageButton mmusicedit;
     ImageButton meditspeed1;
     ImageButton meditaudio1;
+    ImageButton mbackgroundmatting;
     VideoView videoView;
     MediaController mc;
 //    SeekBar seekBar;
@@ -68,6 +65,7 @@ public class Activity_Editpage extends AppCompatActivity {
         videoView = findViewById(R.id.video_View);
 //        seekBar = findViewById(R.id.seekBar2);
         imageButton = findViewById(R.id.goback);
+        mbackgroundmatting = findViewById(R.id.backgroundmatting);
 
         mprogressBar = findViewById(R.id.progressBar);
         mprogressBar.setProgress(0);
@@ -133,6 +131,13 @@ public class Activity_Editpage extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
+//        mbackgroundmatting.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openActivity6();
+//                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+//            }
+//        });
         mprogressBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -163,12 +168,25 @@ public class Activity_Editpage extends AppCompatActivity {
 //        });
 
     }
+
+
     public void buttonPopupWindow(View view){
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
 
         View viewPopupwindow = layoutInflater.inflate(R.layout.activity_popupsticker, null);
 
         PopupWindow popupWindow = new PopupWindow(viewPopupwindow, 1400, 1600, true);
+        popupWindow.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
+//        popupWindow.setAnimationStyle(R.style.popup_window_animation_phone);
+        popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
+
+    }
+    public void buttonPopupWindow3(View view){
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+
+        View viewPopupwindow = layoutInflater.inflate(R.layout.activity_popupbgmatting, null);
+
+        PopupWindow popupWindow = new PopupWindow(viewPopupwindow, 1400, 900, true);
         popupWindow.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
 //        popupWindow.setAnimationStyle(R.style.popup_window_animation_phone);
         popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
@@ -185,6 +203,10 @@ public class Activity_Editpage extends AppCompatActivity {
     }
     private void openActivity5() {
         Intent intent = new Intent(this, Activity_speed.class);
+        startActivity(intent);
+    }
+    private void openActivity6() {
+        Intent intent = new Intent(this, Activity_background.class);
         startActivity(intent);
     }
 
