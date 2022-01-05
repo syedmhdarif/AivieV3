@@ -628,7 +628,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="3dp"
                             android:layout_marginBottom="-3dp"
-                            android:text="Split"
+                            android:text="Speed"
                             android:textColor="@color/white"
                             android:textSize="10dp"
                             android:textStyle="bold" />

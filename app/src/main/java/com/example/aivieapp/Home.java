@@ -19,6 +19,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.TextView;
@@ -35,6 +36,7 @@ import javax.xml.transform.Result;
 public class Home extends Fragment {
     MediaController mc;
     VideoView videoView;
+
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -87,6 +89,8 @@ public class Home extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         Button button2 = (Button) view.findViewById(R.id.button2);
         Button buttonedit = (Button) view.findViewById(R.id.buttonedit);
+        ImageButton msetting = (ImageButton) view.findViewById(R.id.settingbutton);
+        ImageView mbutton2 = (ImageView) view.findViewById(R.id.imageButton2);
 
         TextView seeall = (TextView) view.findViewById(R.id.seeall);
 
@@ -120,6 +124,20 @@ public class Home extends Fragment {
                 openActivity3();
             }
         });
+        msetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity4();
+
+            }
+        });
+        mbutton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity5();
+
+            }
+        });
 
 
 //        seeall.setOnClickListener(new View.OnClickListener() {
@@ -134,6 +152,12 @@ public class Home extends Fragment {
         // Inflate the layout for this fragment
         return view;
     }
+
+    private void openActivity5() {
+        Intent intent = new Intent(getActivity(), Activity_Account.class);
+        startActivity(intent);
+    }
+
 
 //    @Override
 //    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -181,6 +205,10 @@ public class Home extends Fragment {
 
     public void openActivity3(){
         Intent intent = new Intent(getActivity(), Activity_Editpage.class);
+        startActivity(intent);
+    }
+    public void openActivity4(){
+        Intent intent = new Intent(getActivity(), Activity_Setting.class);
         startActivity(intent);
     }
 }
