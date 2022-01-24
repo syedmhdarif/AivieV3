@@ -171,6 +171,13 @@
                         android:layout_marginEnd="26dp"
                         android:background="@drawable/settingbg">
 
+                        <ImageButton
+                            android:id="@+id/vidsettingbutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
                         <ImageView
                             android:id="@+id/language3"
                             android:layout_width="wrap_content"
@@ -203,6 +210,13 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="26dp"
                         android:background="@drawable/settingbg">
+
+                        <ImageButton
+                            android:id="@+id/buttonNotification"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            tools:ignore="SpeakableTextPresentCheck" />
 
                         <ImageView
                             android:id="@+id/language4"
@@ -389,6 +403,13 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="26dp"
                         android:background="@drawable/settingbg">
+
+                        <ImageButton
+                            android:id="@+id/appinfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            tools:ignore="SpeakableTextPresentCheck" />
 
                         <ImageView
                             android:id="@+id/mlanguage4"

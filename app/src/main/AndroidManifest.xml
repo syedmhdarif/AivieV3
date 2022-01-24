@@ -22,6 +22,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Aivieapp">
         <activity
+            android:name=".Activity_appinfo"
+            android:exported="true" />
+        <activity
+            android:name=".Activity_popupnotitone"
+            android:exported="true" />
+        <activity
+            android:name=".Activity_notifications"
+            android:exported="true" />
+        <activity
+            android:name=".Activity_popupvidsetting"
+            android:exported="true" />
+        <activity
+            android:name=".Activity_videosetting"
+            android:exported="true" />
+        <activity
             android:name=".Activity_Account"
             android:exported="true" />
         <activity

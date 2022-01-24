@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/bottomnav.xml" value="0.3671875" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/buttonupdate.xml" value="0.22631578947368422" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/camera_background.xml" value="0.23914473684210527" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/drafthome.xml" value="0.3104166666666667" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/editing_background.xml" value="0.3072916666666667" />
@@ -29,9 +30,11 @@
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/segmentaddvideo.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/selectvideo.xml" value="0.22631578947368422" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/settingbg.xml" value="0.1680921052631579" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/straightline.xml" value="0.23914473684210527" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/templateview.xml" value="0.36302083333333335" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/drawable/textinput.xml" value="0.3375" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_account.xml" value="0.15789473684210525" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_appinfo.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_background.xml" value="0.14802631578947367" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_backgroundmatting.xml" value="0.20953947368421053" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_bgmatting.xml" value="0.20065789473684212" />
@@ -40,15 +43,19 @@
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_editing.xml" value="0.3625" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_editpage.xml" value="0.2" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_home.xml" value="0.264" />
-        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_login.xml" value="0.176" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_music.xml" value="0.176" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_notifications.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_playvideo.xml" value="0.264" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_popupbgmatting.xml" value="0.15789473684210525" />
-        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_popupmusic.xml" value="0.152" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_popupmusic.xml" value="0.2" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_popupnotitone.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_popupsticker.xml" value="0.21907894736842104" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_popupvidsetting.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_setting.xml" value="0.2" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_speed.xml" value="0.21907894736842104" />
+        <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/activity_videosetting.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/fragment_fixture.xml" value="0.296875" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/fragment_home.xml" value="0.152" />
         <entry key="..\:/Users/syedmhdarif_/AndroidStudioProjects/AivieV3/app/src/main/res/layout/fragment_photo.xml" value="0.2859375" />

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_appinfo">
+
+    <RelativeLayout
+        android:id="@+id/headerappinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backbuttonappinfo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+
+            android:scaleType="center"
+            android:src="@drawable/ic_baseline_arrow_back_black"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="App Info"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contentappinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerappinfo">
+
+        <ImageView
+            android:id="@+id/aivielogo"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:src="@drawable/aivie_logo"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current version V 1.3.1"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/aivielogo"
+            android:layout_marginTop="34dp"/>
+
+        <RelativeLayout
+            android:id="@+id/updates"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:layout_below="@+id/version"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/buttonupdate">
+
+            <ImageButton
+                android:id="@+id/notificationtone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="30dp"
+                android:text="Check for updates"
+                android:textColor="@color/pink"
+                android:textSize="14dp" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/updatesnewtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What's New"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="26dp"
+            android:layout_below="@+id/updates"
+            android:layout_marginTop="34dp"/>
+
+        <TextView
+            android:id="@+id/updatesnew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/updatesnewtitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:textAlignment="textStart"
+            android:layout_marginHorizontal="26dp"
+            android:text="Feed your channels a steady of awesome with Artificial Intelligence Video Editor, the all-in-one app" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
