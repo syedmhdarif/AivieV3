@@ -22,6 +22,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Aivieapp">
         <activity
+            android:name=".Acitivity_Drafts"
+            android:exported="true" />
+        <activity
+            android:name=".Activity_language"
+            android:exported="true" />
+        <activity
+            android:name=".Activity_Helpcenter"
+            android:exported="true" />
+        <activity
+            android:name=".Activity_TermsPrivacy"
+            android:exported="true" />
+        <activity
+            android:name=".Activity_popupframerate"
+            android:exported="true" />
+        <activity
+            android:name=".Activity_feedback"
+            android:exported="true" />
+        <activity
             android:name=".Activity_appinfo"
             android:exported="true" />
         <activity

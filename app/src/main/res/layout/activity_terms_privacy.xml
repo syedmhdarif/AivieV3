@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_TermsPrivacy">
+
+    <RelativeLayout
+        android:id="@+id/headerterms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backbuttonterms"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+
+            android:scaleType="center"
+            android:src="@drawable/ic_baseline_arrow_back_black"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terms and Privacy Policy"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/generalinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/headerterms"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/titlepart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="26dp"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:text="1. General Information" />
+
+        <TextView
+            android:id="@+id/content1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This terms of Service (the 'Terms') describes the rights and responsibilities that apply to your use of Aivie application, services, and mobile app, each owned and operated by Deep Wadi Sdn Bhd ('AiSara', 'we', 'our' or 'us')"
+            android:layout_below="@+id/titlepart"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="26dp"
+            android:layout_marginTop="6dp"/>
+
+        <TextView
+            android:id="@+id/content2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please read the Terms carefully before using the Service. If you don't agree to the Terms, as as AiSara's Privacy Policy and AiSara's Community Guidelines, you may not use the service. If you are entering into the Terms on behalf of a company or other legal entity, you represent that you have the authority to bind such entity to the Terms. "
+            android:layout_below="@+id/content1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="26dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/content3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="If you do not have such authority, you must not accept the Terms or use the Service on behalf of such entity. The Service is only available to you if you use the Service."
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/content2"
+            android:layout_marginHorizontal="26dp"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/generalinfo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/generalinfo"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/titlepart2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="26dp"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:text="2. Terms and Conditions" />
+
+        <TextView
+            android:id="@+id/scontent1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't misuse our Services. You may use our Services only as permitted by law, including applicable export and re-export control laws and regulations. We may suspend or stop providing our Services to you if you do not comply with our terms or policies or if we are investigating suspected misconduct."
+            android:layout_below="@+id/titlepart2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="26dp"
+            android:layout_marginTop="6dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/generalinfo3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/generalinfo2"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/titlepart3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="26dp"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:text="3. Privacy Policy" />
+
+        <TextView
+            android:id="@+id/tcontent1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't misuse our Services. You may use our Services only as permitted by law, including applicable export and re-export control laws and regulations. We may suspend or stop providing our Services to you if you do not comply with our terms or policies or if we are investigating suspected misconduct."
+            android:layout_below="@+id/titlepart3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="26dp"
+            android:layout_marginTop="6dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/generalinfo4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/generalinfo3"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/check1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="26dp"/>
+
+        <TextView
+            android:id="@+id/agree1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/check1"
+            android:layout_marginStart="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:text="I agree with the Terms and Conditions" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/generalinfo5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/generalinfo4"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/check2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="26dp"/>
+
+        <TextView
+            android:id="@+id/agree2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/check2"
+            android:layout_marginStart="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:text="I agree with the Privacy Policy" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

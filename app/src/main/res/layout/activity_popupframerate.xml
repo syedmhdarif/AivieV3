@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_popupvidsetting"
     android:background="@android:color/transparent"
-    android:id="@+id/popupvidsetting">
+    tools:context=".Activity_popupframerate">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -34,7 +33,7 @@
             android:layout_below="@+id/holder"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:text="Video Resolution"
+            android:text="Frame Rate"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16dp" />
@@ -68,7 +67,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="Full HD 1080P"
+                    android:text="60 fps"
                     android:textColor="@color/black"
                     android:textSize="14dp" />
 
@@ -98,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true"
-                    android:text="HD 720P"
+                    android:text="30fps"
                     android:textColor="@color/white"
                     android:textStyle="bold"
                     android:textSize="14dp" />
@@ -106,42 +105,8 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
-                android:id="@+id/normalreso"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_below="@+id/hdreso"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="26dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="26dp"
-                android:background="@drawable/settingbox">
-
-                <ImageButton
-                    android:id="@+id/framerate"
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_centerHorizontal="true"
-                    android:text="Normal 480P"
-                    android:textColor="@color/black"
-                    android:textSize="14dp" />
-
-            </RelativeLayout>
-
-
         </RelativeLayout>
 
     </RelativeLayout>
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

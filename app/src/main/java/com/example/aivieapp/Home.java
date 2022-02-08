@@ -92,7 +92,7 @@ public class Home extends Fragment {
         ImageButton msetting = (ImageButton) view.findViewById(R.id.settingbutton);
         ImageView mbutton2 = (ImageView) view.findViewById(R.id.imageButton2);
 
-        TextView seeall = (TextView) view.findViewById(R.id.seeall);
+        ImageButton mseeall = (ImageButton) view.findViewById(R.id.draftpage);
 
 //        button2.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -138,6 +138,13 @@ public class Home extends Fragment {
 
             }
         });
+        mseeall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity6();
+
+            }
+        });
 
 
 //        seeall.setOnClickListener(new View.OnClickListener() {
@@ -149,7 +156,7 @@ public class Home extends Fragment {
 //                Toast.makeText(Home.this, "You clicked text", Toast.LENGTH_LONG).show();
 //            }
 //        });
-        // Inflate the layout for this fragment
+//         Inflate the layout for this fragment
         return view;
     }
 
@@ -209,6 +216,10 @@ public class Home extends Fragment {
     }
     public void openActivity4(){
         Intent intent = new Intent(getActivity(), Activity_Setting.class);
+        startActivity(intent);
+    }
+    public void openActivity6(){
+        Intent intent = new Intent(getActivity(), Acitivity_Drafts.class);
         startActivity(intent);
     }
 }

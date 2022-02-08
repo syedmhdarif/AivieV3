@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Helpcenter">
+
+    <RelativeLayout
+        android:id="@+id/headerHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backbuttonHelp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+
+            android:scaleType="center"
+            android:src="@drawable/ic_baseline_arrow_back_black"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Help Center"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/maincontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/headerHelp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/commonproblem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="26dp"
+            android:text="Common problem"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+
+        <RelativeLayout
+            android:id="@+id/contentproblem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/commonproblem"
+            android:layout_marginTop="15dp">
+
+            <RelativeLayout
+                android:id="@+id/problem1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="26dp"
+                    android:text="Why was my video deleted by Instagram/YouTube ?"
+                    android:textColor="@color/grey2"
+                    android:textSize="12dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="26dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_chevron_right_24"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/problem2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/problem1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="26dp"
+                    android:text="Why was my video deleted by Instagram/YouTube ?"
+                    android:textColor="@color/grey2"
+                    android:textSize="12dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="26dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_chevron_right_24"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/problem3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/problem2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="26dp"
+                    android:text="Why was my video deleted by Instagram/YouTube ?"
+                    android:textColor="@color/grey2"
+                    android:textSize="12dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="26dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_chevron_right_24"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/problem4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/problem3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="26dp"
+                    android:text="Why was my video deleted by Instagram/YouTube ?"
+                    android:textColor="@color/grey2"
+                    android:textSize="12dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="26dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_chevron_right_24"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/problem5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/problem4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/text5"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="26dp"
+                    android:text="Why was my video deleted by Instagram/YouTube ?"
+                    android:textColor="@color/grey2"
+                    android:textSize="12dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="26dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_chevron_right_24"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/problem6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/problem5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/text6"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="26dp"
+                    android:text="Why was my video deleted by Instagram/YouTube ?"
+                    android:textColor="@color/grey2"
+                    android:textSize="12dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="26dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_chevron_right_24"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/problem7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/problem6"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/text7"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="26dp"
+                    android:text="Why was my video deleted by Instagram/YouTube ?"
+                    android:textColor="@color/grey2"
+                    android:textSize="12dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="26dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_chevron_right_24"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/linediff"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/contentproblem"
+            android:layout_marginHorizontal="26dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/grey" />
+
+        <TextView
+            android:id="@+id/contactus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linediff"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="26dp"
+            android:text="Contact Us"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+
+        <RelativeLayout
+            android:id="@+id/livechat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactus"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/textlivechat"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/iconlivechat"
+                android:text="Live Chat"
+                android:textColor="@color/grey2"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/textlivechat2"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="(Monday-Sunday 9am-6pm)"
+                android:textSize="12dp"
+                android:textColor="@color/pink"
+                android:layout_below="@+id/textlivechat"
+                android:layout_toEndOf="@+id/iconlivechat"
+                android:layout_marginStart="20dp"/>
+
+            <ImageButton
+                android:id="@+id/iconlivechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="26dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+
+                android:src="@drawable/ic_live_chat"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                tools:layout_editor_absoluteY="5dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/emaillink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/livechat"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/textemail"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/iconemail"
+                android:text="E-mail"
+                android:textColor="@color/grey2"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/textemail2"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textemail"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/iconemail"
+                android:text="support@aisara.ai"
+                android:textColor="@color/pink"
+                android:textSize="12dp" />
+
+            <ImageButton
+                android:id="@+id/iconemail"
+                android:layout_width="44dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="26dp"
+                android:background="@android:color/transparent"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_email"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                tools:layout_editor_absoluteY="5dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

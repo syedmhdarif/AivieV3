@@ -13,6 +13,10 @@ public class Activity_Setting extends AppCompatActivity {
     ImageButton svidsettingbutton;
     ImageButton sbuttonNotification;
     ImageButton sappinfo;
+    ImageButton sfeedback;
+    ImageButton stermsprivacy;
+    ImageButton shelpcenter;
+    ImageButton sbuttonlanguage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,10 @@ public class Activity_Setting extends AppCompatActivity {
         mbuttonsetting = findViewById(R.id.buttonsetting);
         sbuttonNotification = findViewById(R.id.buttonNotification);
         sappinfo = findViewById(R.id.appinfo);
+        sfeedback = findViewById(R.id.feedback);
+        stermsprivacy = findViewById(R.id.termsprivacy);
+        shelpcenter = findViewById(R.id.helpcenter);
+        sbuttonlanguage = findViewById(R.id.buttonlanguage);
 
         sgoback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,10 +40,38 @@ public class Activity_Setting extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
             }
         });
+        sbuttonlanguage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity9();
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+            }
+        });
+        shelpcenter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity8();
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+            }
+        });
+        stermsprivacy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity7();
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+            }
+        });
         sbuttonNotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openActivity4();
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+            }
+        });
+        sfeedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity6();
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
@@ -81,6 +117,22 @@ public class Activity_Setting extends AppCompatActivity {
     }
     private void openActivity5() {
         Intent intent = new Intent(this, Activity_appinfo.class);
+        startActivity(intent);
+    }
+    private void openActivity6() {
+        Intent intent = new Intent(this, Activity_feedback.class);
+        startActivity(intent);
+    }
+    private void openActivity7() {
+        Intent intent = new Intent(this, Activity_TermsPrivacy.class);
+        startActivity(intent);
+    }
+    private void openActivity8() {
+        Intent intent = new Intent(this, Activity_Helpcenter.class);
+        startActivity(intent);
+    }
+    private void openActivity9() {
+        Intent intent = new Intent(this, Activity_language.class);
         startActivity(intent);
     }
 }

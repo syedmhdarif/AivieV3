@@ -46,4 +46,16 @@ public class Activity_videosetting extends AppCompatActivity {
         popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
 
     }
+
+    public void buttonframerate(View view){
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+
+        View viewPopupwindow = layoutInflater.inflate(R.layout.activity_popupframerate, null);
+
+        PopupWindow popupWindow = new PopupWindow(viewPopupwindow, 1400, 900, true);
+        popupWindow.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
+//        popupWindow.setAnimationStyle(R.style.popup_window_animation_phone);
+        popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
+
+    }
 }

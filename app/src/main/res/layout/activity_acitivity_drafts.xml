@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Acitivity_Drafts">
+
+    <RelativeLayout
+        android:id="@+id/headerDraft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backbuttonDraft"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+
+            android:scaleType="center"
+            android:src="@drawable/ic_baseline_arrow_back_black"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Drafts"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerDraft"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="2000dp">
+
+            <RelativeLayout
+                android:id="@+id/draft1"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="26dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/submitbutton">
+
+                <ImageView
+                    android:id="@+id/demodraft1"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/straightline"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/titledemo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@+id/demodraft1"
+                    android:text="Demo Project 1"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titledemo1"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/demodraft1"
+                    android:text="00:29"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:onClick="popupmenu"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_threedots"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                    tools:layout_editor_absoluteY="5dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/draft2"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_below="@+id/draft1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="26dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/submitbutton">
+
+                <ImageView
+                    android:id="@+id/demodraft2"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/straightline"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/titledemo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@+id/demodraft2"
+                    android:text="Demo Project 1"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titledemo2"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/demodraft2"
+                    android:text="00:29"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:onClick="popupmenu"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_threedots"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                    tools:layout_editor_absoluteY="5dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/draft3"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_below="@+id/draft2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="26dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/submitbutton">
+
+                <ImageView
+                    android:id="@+id/demodraft3"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/straightline"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/titledemo3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@+id/demodraft3"
+                    android:text="Demo Project 1"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titledemo3"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/demodraft3"
+                    android:text="00:29"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:onClick="popupmenu"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_threedots"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                    tools:layout_editor_absoluteY="5dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/draft4"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_below="@+id/draft3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="26dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/submitbutton">
+
+                <ImageView
+                    android:id="@+id/demodraft4"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/straightline"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/titledemo4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@+id/demodraft4"
+                    android:text="Demo Project 1"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titledemo4"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/demodraft4"
+                    android:text="00:29"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:onClick="popupmenu"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_threedots"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                    tools:layout_editor_absoluteY="5dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/draft5"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_below="@+id/draft4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="26dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/submitbutton">
+
+                <ImageView
+                    android:id="@+id/demodraft5"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/straightline"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/titledemo5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@+id/demodraft5"
+                    android:text="Demo Project 1"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titledemo5"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/demodraft5"
+                    android:text="00:29"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:onClick="popupmenu"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_threedots"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                    tools:layout_editor_absoluteY="5dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/draft6"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_below="@+id/draft5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="26dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/submitbutton">
+
+                <ImageView
+                    android:id="@+id/demodraft6"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/straightline"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/titledemo6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@+id/demodraft6"
+                    android:text="Demo Project 1"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titledemo6"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/demodraft6"
+                    android:text="00:29"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:onClick="popupmenu"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_threedots"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                    tools:layout_editor_absoluteY="5dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/draft7"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_below="@+id/draft6"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="26dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/submitbutton">
+
+                <ImageView
+                    android:id="@+id/demodraft7"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/straightline"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/titledemo7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@+id/demodraft7"
+                    android:text="Demo Project 1"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titledemo7"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/demodraft7"
+                    android:text="00:29"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_threedots"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                    tools:layout_editor_absoluteY="5dp" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

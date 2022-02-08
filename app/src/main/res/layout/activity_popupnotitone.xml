@@ -16,12 +16,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
+        <View
+            android:id="@+id/holder"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginHorizontal="170dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/holder" />
+
+        <TextView
+            android:id="@+id/selecttone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/holder"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Select Tone"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
         <ScrollView
             android:id="@+id/scrolltone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+            android:layout_below="@+id/selecttone"
+            android:layout_marginTop="5dp"
             >
 
             <RelativeLayout
@@ -29,23 +51,10 @@
                 android:layout_height="match_parent"
                 >
 
-                <TextView
-                    android:id="@+id/selecttone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Select Tone"
-                    android:textAlignment="center"
-                    android:textSize="14dp"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="15dp"
-                    android:layout_centerHorizontal="true"
-                    />
-
                 <RelativeLayout
                     android:id="@+id/ssong1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/selecttone"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp">
 
@@ -56,17 +65,17 @@
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="20dp"
                         android:text="Night Changes"
-                        android:textColor="@color/black"
+                        android:textColor="@color/grey2"
                         android:textSize="14dp"
                         android:textStyle="normal" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/song1"
                         android:layout_marginHorizontal="20dp"
-                        android:background="@color/grey"
-                        android:layout_below="@+id/song1"/>
+                        android:layout_marginTop="20dp"
+                        android:background="@color/grey" />
 
                 </RelativeLayout>
 
@@ -85,17 +94,17 @@
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="20dp"
                         android:text="River flow"
-                        android:textColor="@color/black"
+                        android:textColor="@color/grey2"
                         android:textSize="14dp"
                         android:textStyle="normal" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/song2"
                         android:layout_marginHorizontal="20dp"
-                        android:background="@color/grey"
-                        android:layout_below="@+id/song2"/>
+                        android:layout_marginTop="20dp"
+                        android:background="@color/grey" />
 
                 </RelativeLayout>
 
@@ -114,7 +123,7 @@
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="20dp"
                         android:text="Blue sky"
-                        android:textColor="@color/black"
+                        android:textColor="@color/grey2"
                         android:textSize="14dp"
                         android:textStyle="normal" />
 
@@ -143,7 +152,7 @@
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="20dp"
                         android:text="Evening sky"
-                        android:textColor="@color/black"
+                        android:textColor="@color/grey2"
                         android:textSize="14dp"
                         android:textStyle="normal" />
 
@@ -154,6 +163,64 @@
                         android:layout_marginHorizontal="20dp"
                         android:background="@color/grey"
                         android:layout_below="@+id/song4"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ssong5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ssong4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/song5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="20dp"
+                        android:text="Evening sky"
+                        android:textColor="@color/grey2"
+                        android:textSize="14dp"
+                        android:textStyle="normal" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@color/grey"
+                        android:layout_below="@+id/song5"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ssong6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ssong5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/song6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="20dp"
+                        android:text="Evening sky"
+                        android:textColor="@color/grey2"
+                        android:textSize="14dp"
+                        android:textStyle="normal" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@color/grey"
+                        android:layout_below="@+id/song6"/>
 
                 </RelativeLayout>
 

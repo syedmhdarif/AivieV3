@@ -98,6 +98,13 @@
                         android:layout_marginEnd="26dp"
                         android:background="@drawable/settingbg">
 
+                        <ImageButton
+                            android:id="@+id/buttonlanguage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
                         <ImageView
                             android:id="@+id/language"
                             android:layout_width="wrap_content"
@@ -305,6 +312,13 @@
                         android:layout_marginEnd="26dp"
                         android:background="@drawable/settingbg">
 
+                        <ImageButton
+                            android:id="@+id/helpcenter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
                         <ImageView
                             android:id="@+id/mlanguage"
                             android:layout_width="wrap_content"
@@ -338,6 +352,13 @@
                         android:layout_marginEnd="26dp"
                         android:background="@drawable/settingbg">
 
+                        <ImageButton
+                            android:id="@+id/termsprivacy"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
                         <ImageView
                             android:id="@+id/mlanguage2"
                             android:layout_width="wrap_content"
@@ -370,6 +391,13 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="26dp"
                         android:background="@drawable/settingbg">
+
+                        <ImageButton
+                            android:id="@+id/feedback"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            tools:ignore="SpeakableTextPresentCheck" />
 
                         <ImageView
                             android:id="@+id/mlanguage3"

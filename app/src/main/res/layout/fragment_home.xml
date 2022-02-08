@@ -85,24 +85,20 @@
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
-                android:layout_height="130dp"
-                android:layout_alignParentStart="true"
+                android:layout_height="150dp"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="124dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:layout_marginEnd="124dp"
-
                 app:srcCompat="@drawable/aivie_logo" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
+                android:layout_height="120dp"
                 android:layout_below="@+id/imageView3"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="26dp"
-                android:layout_marginTop="29dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="26dp"
                 android:background="@drawable/newproject"
                 android:backgroundTint="#F15F79"
@@ -118,28 +114,47 @@
         <RelativeLayout
             android:id="@+id/RelativeLayout2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:layout_below="@+id/mainpart"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             >
 
-            <TextView
-                android:id="@+id/seeall"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="271dp"
+                android:layout_marginEnd="26dp">
 
-                android:layout_marginEnd="26dp"
-                android:layout_marginBottom="8dp"
-                android:clickable="true"
+                <TextView
+                    android:id="@+id/seeall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
 
-                android:text="see all"
-                android:textColor="@color/pink"
-                android:textSize="14dp"
-                tools:ignore="TouchTargetSizeCheck" />
+                    android:text="see all"
+                    android:textColor="@color/pink"
+                    android:textSize="14dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+
+                <ImageButton
+                    android:id="@+id/draftpage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@android:color/transparent"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+
+            </RelativeLayout>
+
+
 
             <TextView
                 android:id="@+id/project1"
