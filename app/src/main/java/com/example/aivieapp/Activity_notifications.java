@@ -48,7 +48,7 @@ public class Activity_notifications extends AppCompatActivity {
     public void Buttonvibrate(View view){
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
 
-        View viewPopupwindow = layoutInflater.inflate(R.layout.activity_popupnotitone, null);
+        View viewPopupwindow = layoutInflater.inflate(R.layout.activity_popupvibrate, null);
 
         PopupWindow popupWindow = new PopupWindow(viewPopupwindow, 1400, 1700, true);
         popupWindow.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);

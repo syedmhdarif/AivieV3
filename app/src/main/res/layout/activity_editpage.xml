@@ -7,7 +7,6 @@
     android:background="#C1C1C1"
     tools:context=".Activity_Editpage">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topnav"
         android:layout_width="match_parent"
@@ -129,6 +128,8 @@
                 android:text="0:15"
                 android:textColor="@color/white"
                 android:textSize="10dp" />
+
+
 
             <TextView
                 android:id="@+id/time3"
@@ -253,7 +254,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/segmentarea"
             android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_height="80dp"
             android:layout_below="@+id/editmusic"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
@@ -272,7 +273,7 @@
             <RelativeLayout
                 android:id="@+id/editsegment"
                 android:layout_width="match_parent"
-                android:layout_height="62dp"
+                android:layout_height="75dp"
                 app:layout_constraintTop_toTopOf="@+id/segmentarea"
                 app:layout_constraintBottom_toBottomOf="@+id/segmentarea"
                 android:layout_alignParentStart="true"
@@ -280,85 +281,186 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
-                <ImageView
-                    android:id="@+id/editsegment1"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
+                <RelativeLayout
+                    android:id="@+id/seditsegment1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp">
 
-                    android:layout_centerInParent="true"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="6dp"
-                    android:background="@drawable/editprogress"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/editsegment1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
 
-                <ImageView
-                    android:id="@+id/editsegment2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/segmentvideo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editsegment1"
+                        android:layout_centerHorizontal="true"
+                        android:text="Scene 1"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/seditsegment2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="6dp"
-                    android:layout_toEndOf="@+id/editsegment1"
-                    android:background="@drawable/editprogress"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_toEndOf="@+id/seditsegment1">
 
-                <ImageView
-                    android:id="@+id/editsegment3"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    <ImageView
+                        android:id="@+id/editsegment2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/segmentvideo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editsegment2"
+                        android:layout_centerHorizontal="true"
+                        android:text="Scene 2"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/seditsegment3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="6dp"
-                    android:layout_toEndOf="@+id/editsegment2"
-                    android:background="@drawable/editprogress"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_toEndOf="@+id/seditsegment2">
 
-                <ImageView
-                    android:id="@+id/editsegment4"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    <ImageView
+                        android:id="@+id/editsegment3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/segmentvideo" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editsegment3"
+                        android:layout_centerHorizontal="true"
+                        android:text="Scene 3"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/seditsegment4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="6dp"
-                    android:layout_toEndOf="@+id/editsegment3"
-                    android:background="@drawable/editprogress"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_toEndOf="@+id/seditsegment3">
 
-                <ImageView
-                    android:id="@+id/editsegment5"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    <ImageView
+                        android:id="@+id/editsegment4"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/segmentvideo" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editsegment4"
+                        android:layout_centerHorizontal="true"
+                        android:text="Scene 4"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/seditsegment5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="6dp"
-                    android:layout_toEndOf="@+id/editsegment4"
-                    android:background="@drawable/editprogress"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_toEndOf="@+id/seditsegment4">
 
-                <ImageView
-                    android:id="@+id/editsegment6"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    <ImageView
+                        android:id="@+id/editsegment5"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/segmentvideo" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editsegment5"
+                        android:layout_centerHorizontal="true"
+                        android:text="Scene 5"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/seditsegment6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="6dp"
-                    android:layout_toEndOf="@+id/editsegment5"
-                    android:background="@drawable/editprogress"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_toEndOf="@+id/seditsegment5">
 
-                <ImageView
-                    android:id="@+id/editsegment7"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    <ImageView
+                        android:id="@+id/editsegment6"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/segmentvideo" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editsegment6"
+                        android:layout_centerHorizontal="true"
+                        android:text="Scene 6"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/seditsegment7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="6dp"
-                    android:layout_toEndOf="@+id/editsegment6"
-                    android:background="@drawable/editprogress"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_toEndOf="@+id/seditsegment6">
+
+                    <ImageView
+                        android:id="@+id/editsegment7"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/segmentvideo" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editsegment7"
+                        android:layout_centerHorizontal="true"
+                        android:text="Scene 7"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
 
                 <ImageButton
                     android:id="@+id/editsegment8"
@@ -367,7 +469,7 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="6dp"
                     android:layout_marginEnd="24dp"
-                    android:layout_toEndOf="@+id/editsegment7"
+                    android:layout_toEndOf="@+id/seditsegment7"
 
                     android:background="@drawable/segmentaddvideo"
                     android:padding="7dp"
@@ -386,7 +488,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/basicedit"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_below="@+id/segmentarea"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"

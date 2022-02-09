@@ -103,10 +103,10 @@
 
             <ImageButton
                 android:id="@+id/vibrate"
-                android:onClick="Buttonvibrate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
+                android:onClick="Buttonvibrate"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
@@ -126,7 +126,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="30dp"
                 android:paddingVertical="5dp"
-                android:text="Default"
+                android:text="Silent"
                 android:textColor="#6C6C6C"
                 android:textSize="12dp" />
         </RelativeLayout>
