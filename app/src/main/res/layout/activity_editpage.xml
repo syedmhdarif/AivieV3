@@ -287,6 +287,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp">
 
+                    <ImageButton
+                        android:id="@+id/segment1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
                     <ImageView
                         android:id="@+id/editsegment1"
                         android:layout_width="50dp"
@@ -470,7 +477,7 @@
                     android:layout_marginTop="6dp"
                     android:layout_marginEnd="24dp"
                     android:layout_toEndOf="@+id/seditsegment7"
-
+                    android:onClick="popupmenu"
                     android:background="@drawable/segmentaddvideo"
                     android:padding="7dp"
                     android:scaleType="fitCenter"

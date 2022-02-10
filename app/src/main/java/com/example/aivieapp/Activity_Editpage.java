@@ -21,17 +21,19 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.MediaController;
+import android.widget.PopupMenu;
 import android.widget.PopupWindow;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
-public class Activity_Editpage extends AppCompatActivity {
+public class Activity_Editpage extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
     static MediaPlayer mMediaPlayer;
 
 
@@ -49,6 +51,7 @@ public class Activity_Editpage extends AppCompatActivity {
     ImageButton imageButton;
     TextView curTime;
     TextView toTime;
+    ImageButton ssegment1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +80,14 @@ public class Activity_Editpage extends AppCompatActivity {
         mc = new MediaController(Activity_Editpage.this);
         videoView.setMediaController(mc);
         mc.setAnchorView(videoView);
+        ssegment1 = findViewById(R.id.segment1);
+
+        ssegment1.setOnLongClickListener(new View.OnLongClickListener() {
+            public boolean onLongClick(View arg0) {
+                Toast.makeText(getApplicationContext(), "Long Clicked " , Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
 
 
 
@@ -92,17 +103,17 @@ public class Activity_Editpage extends AppCompatActivity {
                 }
             }
         });
-        editpage2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (ContextCompat.checkSelfPermission(Activity_Editpage.this, Manifest.permission.READ_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
-                    ActivityCompat.requestPermissions(Activity_Editpage.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
-                }
-                else {
-                    selectVideo2();
-                }
-            }
-        });
+//        editpage2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (ContextCompat.checkSelfPermission(Activity_Editpage.this, Manifest.permission.READ_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
+//                    ActivityCompat.requestPermissions(Activity_Editpage.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+//                }
+//                else {
+//                    selectVideo2();
+//                }
+//            }
+//        });
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -208,6 +219,32 @@ public class Activity_Editpage extends AppCompatActivity {
     private void openActivity6() {
         Intent intent = new Intent(this, Activity_background.class);
         startActivity(intent);
+    }
+
+    public void popupmenu(View view) {
+        PopupMenu spopupmenu = new PopupMenu(this, view);
+        spopupmenu.setOnMenuItemClickListener(this);
+        spopupmenu.inflate(R.menu.popup_menu);
+        spopupmenu.show();
+    }
+
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.rename:
+                Toast.makeText(this, "Rename", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.duplicate:
+                Toast.makeText(this, "Duplicated", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.delete:
+                Toast.makeText(this, "Deleted", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return false;
+        }
     }
 
     private class MyAsync extends AsyncTask<Void, Integer, Void>
