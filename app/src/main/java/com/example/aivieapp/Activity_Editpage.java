@@ -21,6 +21,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,7 @@ import android.widget.MediaController;
 import android.widget.PopupMenu;
 import android.widget.PopupWindow;
 import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -114,6 +116,9 @@ public class Activity_Editpage extends AppCompatActivity implements PopupMenu.On
 //                }
 //            }
 //        });
+
+
+
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -178,8 +183,33 @@ public class Activity_Editpage extends AppCompatActivity implements PopupMenu.On
 //            }
 //        });
 
+
+
+
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.popup_videoedit, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.record:
+                Toast.makeText(this, "Record", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.upload:
+                Toast.makeText(this, "Upload", Toast.LENGTH_SHORT).show();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     public void buttonPopupWindow(View view){
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
@@ -223,9 +253,12 @@ public class Activity_Editpage extends AppCompatActivity implements PopupMenu.On
 
     public void popupmenu(View view) {
         PopupMenu spopupmenu = new PopupMenu(this, view);
+//        spopupmenu = PopupMenu(getApplicationContext(), editpage2);
         spopupmenu.setOnMenuItemClickListener(this);
-        spopupmenu.inflate(R.menu.popup_menu);
+        spopupmenu.inflate(R.menu.popup_videoedit);
         spopupmenu.show();
+
+
     }
 
     @Override
@@ -375,4 +408,6 @@ public class Activity_Editpage extends AppCompatActivity implements PopupMenu.On
     }
 
 
+    private class fun {
+    }
 }
