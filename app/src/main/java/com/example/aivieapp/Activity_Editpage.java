@@ -49,10 +49,10 @@ public class Activity_Editpage extends AppCompatActivity implements PopupMenu.On
     VideoView videoView;
     MediaController mc;
 //    SeekBar seekBar;
-    SeekBar mprogressBar;
+//    SeekBar mprogressBar;
     ImageButton imageButton;
-    TextView curTime;
-    TextView toTime;
+//    TextView curTime;
+//    TextView toTime;
     ImageButton ssegment1;
 
     @Override
@@ -72,12 +72,12 @@ public class Activity_Editpage extends AppCompatActivity implements PopupMenu.On
         imageButton = findViewById(R.id.goback);
         mbackgroundmatting = findViewById(R.id.backgroundmatting);
 
-        mprogressBar = findViewById(R.id.progressBar);
-        mprogressBar.setProgress(0);
-        mprogressBar.setMax(100);
-
-        curTime = findViewById(R.id.time1);
-        toTime = findViewById(R.id.time5);
+//        mprogressBar = findViewById(R.id.progressBar);
+////        mprogressBar.setProgress(0);
+////        mprogressBar.setMax(100);
+////
+////        curTime = findViewById(R.id.time1);
+////        toTime = findViewById(R.id.time5);
 
         mc = new MediaController(Activity_Editpage.this);
         videoView.setMediaController(mc);
@@ -154,26 +154,26 @@ public class Activity_Editpage extends AppCompatActivity implements PopupMenu.On
 //                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 //            }
 //        });
-        mprogressBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                if (fromUser){
-                    mprogressBar.setProgress(progress);
-                }
-            }
+//        mprogressBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//            @Override
+//            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+//                if (fromUser){
+//                    mprogressBar.setProgress(progress);
+//                }
+//            }
+//
+//            @Override
+//            public void onStartTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//
+//            @Override
+//            public void onStopTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//        });
 
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-
-        new MyAsync().execute();
+//        new MyAsync().execute();
 
 
 //        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
@@ -280,46 +280,46 @@ public class Activity_Editpage extends AppCompatActivity implements PopupMenu.On
         }
     }
 
-    private class MyAsync extends AsyncTask<Void, Integer, Void>
-    {
-        int duration = 0;
-        int current = 0;
-        @Override
-        protected Void doInBackground(Void... params) {
-
-
-
-            videoView.start();
-            videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-
-                public void onPrepared(MediaPlayer mp) {
-                    duration = videoView.getDuration();
-                }
-            });
-
-            do {
-                current = videoView.getCurrentPosition();
-                System.out.println("duration - " + duration + " current- "
-                        + current);
-                try {
-                    publishProgress((int) (current * 100 / duration));
-                    if(mprogressBar.getProgress() >= 100){
-                        break;
-                    }
-                } catch (Exception e) {
-                }
-            } while (mprogressBar.getProgress() <= 100);
-
-            return null;
-        }
-
-        @Override
-        protected void onProgressUpdate(Integer... values) {
-            super.onProgressUpdate(values);
-            System.out.println(values[0]);
-            mprogressBar.setProgress(values[0]);
-        }
-    }
+//    private class MyAsync extends AsyncTask<Void, Integer, Void>
+//    {
+//        int duration = 0;
+//        int current = 0;
+//        @Override
+//        protected Void doInBackground(Void... params) {
+//
+//
+//
+//            videoView.start();
+//            videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+//
+//                public void onPrepared(MediaPlayer mp) {
+//                    duration = videoView.getDuration();
+//                }
+//            });
+//
+//            do {
+//                current = videoView.getCurrentPosition();
+//                System.out.println("duration - " + duration + " current- "
+//                        + current);
+//                try {
+//                    publishProgress((int) (current * 100 / duration));
+//                    if(mprogressBar.getProgress() >= 100){
+//                        break;
+//                    }
+//                } catch (Exception e) {
+//                }
+//            } while (mprogressBar.getProgress() <= 100);
+//
+//            return null;
+//        }
+//
+//        @Override
+//        protected void onProgressUpdate(Integer... values) {
+//            super.onProgressUpdate(values);
+//            System.out.println(values[0]);
+//            mprogressBar.setProgress(values[0]);
+//        }
+//    }
 
     public void PlayButton(View view){
 
@@ -382,32 +382,32 @@ public class Activity_Editpage extends AppCompatActivity implements PopupMenu.On
 
         }
     }
-    @SuppressLint("HandlerLeak")
-    private Handler handler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-//            Log.i("handler ", "handler called");
-            int current_position = msg.what;
-            mprogressBar.setProgress(current_position);
-            String cTime = createTimeLabel(current_position);
-            curTime.setText(cTime);
-        }
-    };
-    public String createTimeLabel (int duration){
-        String timerlabel = "";
-        int min = duration / 1000 / 60;
-        int sec = duration / 1000 % 60;
-
-        timerlabel += min + ":";
-
-        if (sec<10)timerlabel += "0";
-        timerlabel += sec;
-
-        return timerlabel;
-
-    }
-
-
-    private class fun {
-    }
+//    @SuppressLint("HandlerLeak")
+//    private Handler handler = new Handler() {
+//        @Override
+//        public void handleMessage(Message msg) {
+////            Log.i("handler ", "handler called");
+//            int current_position = msg.what;
+//            mprogressBar.setProgress(current_position);
+//            String cTime = createTimeLabel(current_position);
+//            curTime.setText(cTime);
+//        }
+//    };
+//    public String createTimeLabel (int duration){
+//        String timerlabel = "";
+//        int min = duration / 1000 / 60;
+//        int sec = duration / 1000 % 60;
+//
+//        timerlabel += min + ":";
+//
+//        if (sec<10)timerlabel += "0";
+//        timerlabel += sec;
+//
+//        return timerlabel;
+//
+//    }
+//
+//
+//    private class fun {
+//    }
 }

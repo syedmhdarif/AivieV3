@@ -52,8 +52,8 @@
         android:background="@drawable/camera_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headerpart"
@@ -62,7 +62,7 @@
         <RelativeLayout
             android:id="@+id/videoview1"
             android:layout_width="wrap_content"
-            android:layout_height="450dp"
+            android:layout_height="430dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="0dp">
@@ -85,169 +85,475 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/timeinterval"
+            android:id="@+id/videosets"
             android:layout_width="match_parent"
-            android:layout_height="15dp"
-            android:layout_below="@+id/videoview1"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp">
-
-            <TextView
-                android:id="@+id/time1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="36dp"
-                android:text="0:00"
-                android:textColor="@color/white"
-                android:textSize="10dp" />
-
-            <TextView
-                android:id="@+id/time2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="60dp"
-                android:layout_toEndOf="@+id/time1"
-                android:text="0:15"
-                android:textColor="@color/white"
-                android:textSize="10dp" />
-
-            <TextView
-                android:id="@+id/time3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="60dp"
-                android:layout_toEndOf="@+id/time2"
-                android:text="0:30"
-                android:textColor="@color/white"
-                android:textSize="10dp" />
-
-            <TextView
-                android:id="@+id/time4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="60dp"
-                android:layout_toEndOf="@+id/time3"
-                android:text="0:45"
-                android:textColor="@color/white"
-                android:textSize="10dp" />
-
-            <TextView
-                android:id="@+id/time5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="60dp"
-                android:layout_toEndOf="@+id/time4"
-                android:text="1:00"
-                android:textColor="@color/white"
-                android:textSize="10dp" />
-
-        </RelativeLayout>
-
-
-        <RelativeLayout
-            android:id="@+id/editprogress"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_below="@+id/timeinterval"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="24dp"
-            android:layout_toStartOf="@+id/videoview1"
-            android:background="@drawable/editprogress">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/videoview1">
 
             <ImageButton
-                android:id="@+id/endadjust"
-                android:layout_width="26dp"
-                android:layout_height="50dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="0dp"
-                android:background="@drawable/segmentaddvideo"
-                android:src="@drawable/ic_lineprogressbar"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-
-            <ImageButton
-                android:id="@+id/startadjust"
-                android:layout_width="26dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="0dp"
-                android:background="@drawable/segmentaddvideo"
-                android:src="@drawable/ic_lineprogressbar"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-            <SeekBar
-                android:id="@+id/progressBar"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
                 android:layout_centerInParent="true"
-                android:layout_marginStart="28dp"
-                android:layout_marginEnd="28dp" />
+                android:background="@android:color/transparent"
+                android:onClick="PlayButton"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_play"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
+            <ImageButton
+                android:id="@+id/redo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/undo"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_redo_black_24dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <ImageButton
+                android:id="@+id/undo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="24dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_undo_black_24dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_zoom"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/editmusic"
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"
-            android:layout_below="@+id/editprogress"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="9dp"
-            android:layout_marginEnd="24dp"
-            android:background="@drawable/editprogress">
+            android:id="@+id/maintimeline"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/videosets">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <HorizontalScrollView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:text="adele - When we were young"
-                android:textAlignment="center"
-                android:textColor="@color/pink"
-                android:textSize="10dp"
-                android:textStyle="bold" />
+                >
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:id="@+id/timeinterval"
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/time1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="0dp"
+                            android:text="0:00"
+                            android:textColor="@color/white"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/time2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="60dp"
+                            android:layout_toEndOf="@+id/time1"
+                            android:text="0:15"
+                            android:textColor="@color/white"
+                            android:textSize="10dp" />
+
+
+                        <TextView
+                            android:id="@+id/time3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="60dp"
+                            android:layout_toEndOf="@+id/time2"
+                            android:text="0:30"
+                            android:textColor="@color/white"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/time4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="60dp"
+                            android:layout_toEndOf="@+id/time3"
+                            android:text="0:45"
+                            android:textColor="@color/white"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/time5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="60dp"
+                            android:layout_toEndOf="@+id/time4"
+                            android:text="1:00"
+                            android:textColor="@color/white"
+                            android:textSize="10dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/editsegment"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_below="@+id/timeinterval">
+
+                        <RelativeLayout
+                            android:id="@+id/seditsegment1"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="24dp">
+
+                            <ImageButton
+                                android:id="@+id/segment1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <ImageView
+                                android:id="@+id/editsegment1"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="6dp"
+                                android:background="@drawable/segmentvideo" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/editsegment1"
+                                android:layout_centerHorizontal="true"
+                                android:text="Scene 1"
+                                android:textColor="@color/white"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/seditsegment2"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toEndOf="@+id/seditsegment1">
+
+                            <ImageView
+                                android:id="@+id/editsegment2"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/segmentvideo" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/editsegment2"
+                                android:layout_centerHorizontal="true"
+                                android:text="Scene 2"
+                                android:textColor="@color/white"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/seditsegment3"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toEndOf="@+id/seditsegment2">
+
+                            <ImageView
+                                android:id="@+id/editsegment3"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/segmentvideo" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/editsegment3"
+                                android:layout_centerHorizontal="true"
+                                android:text="Scene 3"
+                                android:textColor="@color/white"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/seditsegment4"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toEndOf="@+id/seditsegment3">
+
+                            <ImageView
+                                android:id="@+id/editsegment4"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/segmentvideo" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/editsegment4"
+                                android:layout_centerHorizontal="true"
+                                android:text="Scene 4"
+                                android:textColor="@color/white"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/seditsegment5"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toEndOf="@+id/seditsegment4">
+
+                            <ImageView
+                                android:id="@+id/editsegment5"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/segmentvideo" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/editsegment5"
+                                android:layout_centerHorizontal="true"
+                                android:text="Scene 5"
+                                android:textColor="@color/white"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/seditsegment6"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toEndOf="@+id/seditsegment5">
+
+                            <ImageView
+                                android:id="@+id/editsegment6"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/segmentvideo" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/editsegment6"
+                                android:layout_centerHorizontal="true"
+                                android:text="Scene 6"
+                                android:textColor="@color/white"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <ScrollView
+                        android:id="@+id/scrollsegment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editsegment"
+                        android:layout_marginTop="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/editmusic"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="24dp">
+
+                                <ImageButton
+                                    android:id="@+id/musicedit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginEnd="0dp"
+                                    android:layout_marginBottom="0dp"
+                                    android:background="@drawable/musictrackbg"
+                                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="40dp"
+                                    android:text="3 audio tracks"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/pink"
+                                    android:textSize="10dp"
+                                    android:textStyle="bold" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/stickersegment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/editmusic"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="24dp"
+                                android:layout_marginTop="4dp">
+
+                                <RelativeLayout
+                                    android:id="@+id/sticker1s"
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/stickerbox">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="Sticker 1"
+                                        android:textColor="@color/white"
+                                        android:textSize="10dp"
+                                        android:textStyle="bold" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/sticker2s"
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/sticker1s"
+                                    android:layout_marginStart="24dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_toEndOf="@+id/sticker1s"
+                                    android:background="@drawable/stickerbox">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="Sticker 1"
+                                        android:textColor="@color/white"
+                                        android:textSize="10dp"
+                                        android:textStyle="bold" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/sticker3s"
+                                    android:layout_width="180dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/sticker2s"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/stickerbox">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="30dp"
+                                        android:text="Sticker 3"
+                                        android:textColor="@color/white"
+                                        android:textSize="10dp"
+                                        android:textStyle="bold" />
+
+                                </RelativeLayout>
+
+
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                    </ScrollView>
+
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <ImageButton
+                android:id="@+id/editsegment8"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/segmentaddvideo"
+                android:onClick="popupmenu"
+                android:padding="7dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_add_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
 
         </RelativeLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
             android:id="@+id/basicedit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="20dp"
             android:layout_marginEnd="0dp"
-            android:layout_marginBottom="30dp">
+            android:layout_below="@+id/maintimeline"
+            android:background="@drawable/editingfeaturesec">
 
             <HorizontalScrollView
                 android:id="@+id/horizontalscroll"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_constraintBottom_toBottomOf="@+id/basicedit"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/basicedit">
+                android:layout_height="match_parent">
 
                 <RelativeLayout
                     android:id="@+id/horizontalscroll1"
@@ -311,6 +617,8 @@
                             android:layout_centerHorizontal="true"
                             android:background="@android:color/transparent"
                             android:onClick="buttonPopupWindow2"
+                            android:scaleType="fitCenter"
+                            android:padding="7dp"
                             android:src="@drawable/ic_music_upload"
                             app:layout_constraintStart_toStartOf="parent"
                             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
@@ -347,6 +655,8 @@
                             android:layout_height="50dp"
                             android:layout_centerHorizontal="true"
                             android:background="@android:color/transparent"
+                            android:padding="7dp"
+                            android:scaleType="fitCenter"
                             android:src="@drawable/ic_effect"
                             app:layout_constraintStart_toStartOf="parent"
                             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
@@ -360,7 +670,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="3dp"
                             android:layout_marginBottom="-3dp"
-                            android:text="Stciker"
+                            android:text="Effect"
                             android:textColor="@color/white"
                             android:textSize="10dp"
                             android:textStyle="bold" />
@@ -383,7 +693,7 @@
                             android:layout_height="50dp"
                             android:layout_centerHorizontal="true"
                             android:background="@android:color/transparent"
-                            android:padding="9dp"
+                            android:padding="7dp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/ic_record"
                             app:layout_constraintStart_toStartOf="parent"
@@ -411,7 +721,7 @@
             </HorizontalScrollView>
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
 
 
 
