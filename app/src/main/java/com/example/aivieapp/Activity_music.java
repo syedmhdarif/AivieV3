@@ -52,7 +52,7 @@ public class Activity_music extends AppCompatActivity implements PopupMenu.OnMen
     public void buttonPopupWindow(View view){
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
 
-        View viewPopupwindow = layoutInflater.inflate(R.layout.activity_popupmusic, null);
+        View viewPopupwindow = layoutInflater.inflate(R.layout.activity_popupmusic3, null);
 
         PopupWindow popupWindow = new PopupWindow(viewPopupwindow, 1400, 1600, true);
         popupWindow.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);

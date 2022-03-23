@@ -26,6 +26,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.PopupMenu;
 import android.widget.PopupWindow;
@@ -45,6 +46,7 @@ public class Activity_Editpage extends AppCompatActivity implements PopupMenu.On
     ImageButton mmusicedit;
     ImageButton meditspeed1;
     ImageButton meditaudio1;
+    ImageButton meditText1;
     ImageButton mbackgroundmatting;
     VideoView videoView;
     MediaController mc;
@@ -54,6 +56,7 @@ public class Activity_Editpage extends AppCompatActivity implements PopupMenu.On
 //    TextView curTime;
 //    TextView toTime;
     ImageButton ssegment1;
+    ImageView seditsegment2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,9 +71,11 @@ public class Activity_Editpage extends AppCompatActivity implements PopupMenu.On
         mmusicedit = findViewById(R.id.musicedit);
         meditaudio1 = findViewById(R.id.editAudio1);
         videoView = findViewById(R.id.video_View);
+        meditText1 = findViewById(R.id.editText1);
 //        seekBar = findViewById(R.id.seekBar2);
         imageButton = findViewById(R.id.goback);
         mbackgroundmatting = findViewById(R.id.backgroundmatting);
+        seditsegment2 = findViewById(R.id.editsegment2);
 
 //        mprogressBar = findViewById(R.id.progressBar);
 ////        mprogressBar.setProgress(0);
@@ -84,12 +89,22 @@ public class Activity_Editpage extends AppCompatActivity implements PopupMenu.On
         mc.setAnchorView(videoView);
         ssegment1 = findViewById(R.id.segment1);
 
+//        seditsegment2.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                val clipText = ""
+//                return false;
+//            }
+//        });
+
         ssegment1.setOnLongClickListener(new View.OnLongClickListener() {
             public boolean onLongClick(View arg0) {
                 Toast.makeText(getApplicationContext(), "Long Clicked " , Toast.LENGTH_SHORT).show();
                 return false;
             }
         });
+
+
 
 
 
@@ -126,6 +141,15 @@ public class Activity_Editpage extends AppCompatActivity implements PopupMenu.On
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
+
+        meditText1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity7();
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+            }
+        });
+
         mmusicedit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -248,6 +272,10 @@ public class Activity_Editpage extends AppCompatActivity implements PopupMenu.On
     }
     private void openActivity6() {
         Intent intent = new Intent(this, Activity_background.class);
+        startActivity(intent);
+    }
+    private void openActivity7() {
+        Intent intent = new Intent(this, Activity_Recyclerview.class);
         startActivity(intent);
     }
 

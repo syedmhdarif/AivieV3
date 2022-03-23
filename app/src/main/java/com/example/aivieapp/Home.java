@@ -21,10 +21,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
+
+import java.util.ArrayList;
 
 import javax.xml.transform.Result;
 
@@ -36,6 +39,7 @@ import javax.xml.transform.Result;
 public class Home extends Fragment {
     MediaController mc;
     VideoView videoView;
+    ListView listView;
 
 
 
@@ -84,15 +88,30 @@ public class Home extends Fragment {
 
     int SELECT_IMAGE_CODE=1;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         Button button2 = (Button) view.findViewById(R.id.button2);
-        Button buttonedit = (Button) view.findViewById(R.id.buttonedit);
+        ListView listView = (ListView) view.findViewById(R.id.listView);
+//        Button buttonedit = (Button) view.findViewById(R.id.buttonedit);
         ImageButton msetting = (ImageButton) view.findViewById(R.id.settingbutton);
         ImageView mbutton2 = (ImageView) view.findViewById(R.id.imageButton2);
 
         ImageButton mseeall = (ImageButton) view.findViewById(R.id.draftpage);
+
+        ArrayList<Videodraft> arrayList=new ArrayList<>();
+
+        arrayList.add(new Videodraft(R.drawable.ic_baseline_image_24, "Draft 1, The Only Exception", "00:39 min" ));
+        arrayList.add(new Videodraft(R.drawable.ic_baseline_image_24, "Draft 2: Visual Studio", "00:29 min" ));
+        arrayList.add(new Videodraft(R.drawable.ic_baseline_image_24, "Draft 3", "00:59 min" ));
+        arrayList.add(new Videodraft(R.drawable.ic_baseline_image_24, "Draft 4", "01:19 min" ));
+
+        listView.setAdapter(new Draftadapter(view.getContext(), R.layout.activity_popupmusic3,arrayList));
+
+//        Draftadapter draftadapter = new Draftadapter(this,R.layout.activity_popupmusic3,arrayList);
+//        listView.setAdapter(draftadapter);
+
+
 
 //        button2.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -118,12 +137,12 @@ public class Home extends Fragment {
                 openActivity3();
             }
         });
-        buttonedit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openActivity3();
-            }
-        });
+//        buttonedit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openActivity3();
+//            }
+//        });
         msetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -219,7 +238,7 @@ public class Home extends Fragment {
         startActivity(intent);
     }
     public void openActivity6(){
-        Intent intent = new Intent(getActivity(), Acitivity_Drafts.class);
+        Intent intent = new Intent(getActivity(), Activity_Recyclerview2.class);
         startActivity(intent);
     }
 }

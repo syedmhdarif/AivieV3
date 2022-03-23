@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/music1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp">
+
+        <ImageView
+            android:id="@+id/vidprev1"
+            android:layout_width="105dp"
+            android:layout_height="73dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="26dp"
+            android:background="@drawable/drafthome" />
+
+        <TextView
+            android:id="@+id/titlemusic1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="14dp"
+            android:layout_toEndOf="@+id/vidprev1"
+            android:text="The only exception"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/timevidprev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titlemusic1"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@+id/vidprev1"
+            android:text="03:25"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+
+        <ImageButton
+            android:id="@+id/addmusicaction"
+            android:layout_width="37dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="24dp"
+            android:background="@android:color/transparent"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_plusvideo"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
