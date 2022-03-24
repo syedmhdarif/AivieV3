@@ -18,6 +18,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -101,12 +102,35 @@ public class Home extends Fragment {
 
         ArrayList<Videodraft> arrayList=new ArrayList<>();
 
-        arrayList.add(new Videodraft(R.drawable.ic_baseline_image_24, "Draft 1, The Only Exception", "00:39 min" ));
+        arrayList.add(new Videodraft(R.drawable.ic_baseline_image_24, "Draft 1: The Only Exception", "00:39 min" ));
         arrayList.add(new Videodraft(R.drawable.ic_baseline_image_24, "Draft 2: Visual Studio", "00:29 min" ));
-        arrayList.add(new Videodraft(R.drawable.ic_baseline_image_24, "Draft 3", "00:59 min" ));
-        arrayList.add(new Videodraft(R.drawable.ic_baseline_image_24, "Draft 4", "01:19 min" ));
+        arrayList.add(new Videodraft(R.drawable.ic_baseline_image_24, "Draft 3:", "00:59 min" ));
+        arrayList.add(new Videodraft(R.drawable.ic_baseline_image_24, "Draft 4: Blue bird", "01:19 min" ));
+        arrayList.add(new Videodraft(R.drawable.ic_baseline_image_24, "Draft 5: Memories - One piece", "00:39 min" ));
+        arrayList.add(new Videodraft(R.drawable.ic_baseline_image_24, "Draft 6: Android", "00:29 min" ));
 
         listView.setAdapter(new Draftadapter(view.getContext(), R.layout.activity_popupmusic3,arrayList));
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position==0){
+                    Intent intent = new Intent(getActivity(), Activity_Editpage.class);
+                    startActivity(intent);
+
+                }
+                else if (position==1){
+                    Intent intent = new Intent(getActivity(), Activity_Editpage.class);
+                    startActivity(intent);
+
+                }
+                else{
+                    Intent intent = new Intent(getActivity(), Activity_Editpage.class);
+                    startActivity(intent);
+
+                }
+            }
+        });
 
 //        Draftadapter draftadapter = new Draftadapter(this,R.layout.activity_popupmusic3,arrayList);
 //        listView.setAdapter(draftadapter);
